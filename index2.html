@@ -4,6 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dr. Enrique Saldaña López | Traumatología y Ortopedia en Reynosa</title>
+
+    <!-- SEO -->
+    <meta name="description" content="Dr. Enrique Saldaña López, especialista en Traumatología y Ortopedia en Reynosa, Tamaulipas. Cirugía de cadera y rodilla, artroscopia deportiva y atención de fracturas en Christus Muguerza.">
+    <meta name="keywords" content="traumatólogo Reynosa, ortopedista Reynosa, cirugía de rodilla, artroscopia, fracturas, Christus Muguerza Reynosa">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Dr. Enrique Saldaña López">
+    <link rel="canonical" href="https://www.drenriquesaldana.com/">
+    <meta name="theme-color" content="#004a99">
+
+    <!-- Open Graph / Facebook / WhatsApp preview -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_MX">
+    <meta property="og:title" content="Dr. Enrique Saldaña López | Traumatología y Ortopedia en Reynosa">
+    <meta property="og:description" content="Cirugía de alta especialidad en ortopedia: reemplazo de cadera y rodilla, artroscopia deportiva y atención de fracturas en Reynosa, Tamaulipas.">
+    <meta property="og:image" content="https://www.drenriquesaldana.com/assets/images/main.jpeg">
+    <meta property="og:url" content="https://www.drenriquesaldana.com/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Dr. Enrique Saldaña López | Traumatología y Ortopedia en Reynosa">
+    <meta name="twitter:description" content="Cirugía de alta especialidad en ortopedia en Reynosa, Tamaulipas.">
+    <meta name="twitter:image" content="https://www.drenriquesaldana.com/assets/images/main.jpeg">
+
+    <!-- Favicon (replace with real files if you have a logo) -->
+    <link rel="icon" href="assets/images/favicon.ico" sizes="any">
+
+    <!-- Performance: connect early to third-party origins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Google Fonts -->
@@ -11,13 +40,65 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+    <!-- Structured data: helps Google show this as a local medical practice with map/reviews -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "Dr. Enrique Saldaña López",
+      "medicalSpecialty": "Orthopedic",
+      "image": "https://www.drenriquesaldana.com/assets/images/main.jpeg",
+      "telephone": "+52-899-221-0025",
+      "email": "mailto:enrisal1410@hotmail.com",
+      "url": "https://www.drenriquesaldana.com/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Tiburcio Garza Zamora Km 5.5, Rancho Grande",
+        "addressLocality": "Reynosa",
+        "addressRegion": "Tamaulipas",
+        "postalCode": "88610",
+        "addressCountry": "MX"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 26.110780,
+        "longitude": -98.330348
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+          "opens": "10:00",
+          "closes": "13:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+          "opens": "16:00",
+          "closes": "18:30"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "10:00",
+          "closes": "13:00"
+        }
+      ]
+    }
+    </script>
+    
     <style>
+        html { scroll-behavior: smooth; scroll-padding-top: 90px; }
         body { font-family: 'Inter', sans-serif; color: #333; line-height: 1.6; }
         h1, h2, h3, .navbar-brand { font-family: 'Poppins', sans-serif; font-weight: 700; }
 
+        .skip-link { position: absolute; left: -9999px; top: 0; background: #004a99; color: #fff; padding: 12px 20px; z-index: 2000; border-radius: 0 0 8px 0; }
+        .skip-link:focus { left: 0; }
+
         .navbar { background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-        .hero {
-            background: linear-gradient(rgba(0, 45, 90, 0.85), rgba(0, 45, 90, 0.85)),
+        .nav-link.active { color: #004a99 !important; font-weight: 600; }
+        .hero { 
+            background: linear-gradient(rgba(0, 45, 90, 0.85), rgba(0, 45, 90, 0.85)), 
                         url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1920&q=80');
             background-size: cover;
             background-position: center;
@@ -41,31 +122,57 @@
         .gallery-card:hover img, .gallery-card:focus-visible img { transform: scale(1.05); }
         .gallery-card:focus-visible { outline: 3px solid #004a99; outline-offset: 4px; }
         .professional-photo { width: 100%; max-height: 540px; object-fit: cover; object-position: center; }
+
+        .whatsapp-float {
+            position: fixed; right: 24px; bottom: 24px; z-index: 1050;
+            width: 60px; height: 60px; border-radius: 50%;
+            background: #25d366; color: white; display: flex; align-items: center; justify-content: center;
+            font-size: 1.8rem; box-shadow: 0 6px 20px rgba(0,0,0,0.25); transition: transform .2s;
+        }
+        .whatsapp-float:hover, .whatsapp-float:focus-visible { transform: scale(1.08); color: white; }
+
+        .back-to-top {
+            position: fixed; right: 24px; bottom: 96px; z-index: 1050;
+            width: 44px; height: 44px; border-radius: 50%;
+            background: #004a99; color: white; display: none; align-items: center; justify-content: center;
+            border: none; box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+        }
+        .back-to-top.show { display: flex; }
+
+        .accordion-button:not(.collapsed) { background-color: #f4f8fb; color: #004a99; }
+        .accordion-button:focus { box-shadow: 0 0 0 0.2rem rgba(0,74,153,0.25); }
+
+        @media (max-width: 576px) {
+            .whatsapp-float { width: 52px; height: 52px; font-size: 1.5rem; right: 16px; bottom: 16px; }
+            .back-to-top { right: 16px; bottom: 80px; width: 40px; height: 40px; }
+        }
     </style>
 </head>
 <body>
 
+    <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
+
     <!-- Navegación -->
-    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top" aria-label="Navegación principal">
         <div class="container">
             <a class="navbar-brand text-primary" href="#"><i class="fa-solid fa-bone me-2"></i>DR. ENRIQUE SALDAÑA LÓPEZ</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menú de navegación">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto align-items-center">
+                <ul class="navbar-nav ms-auto align-items-center" id="navLinks">
                     <li class="nav-item"><a class="nav-link" href="#servicios">Especialidades</a></li>
                     <li class="nav-item"><a class="nav-link" href="#sobre-mi">Trayectoria</a></li>
                     <li class="nav-item"><a class="nav-link" href="#galeria">Galería</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contacto">Ubicación</a></li>
-                    <li class="nav-item"><a class="btn btn-whatsapp ms-lg-3" href="https://wa.me/528992210025"><i class="fa-brands fa-whatsapp me-2"></i>Citas WhatsApp</a></li>
+                    <li class="nav-item"><a class="btn btn-whatsapp ms-lg-3" href="https://wa.me/528992210025" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp me-2"></i>Citas WhatsApp</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <header class="hero text-center text-md-start">
+    <header class="hero text-center text-md-start" id="main-content">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-8">
@@ -90,22 +197,7 @@
             <div class="row g-4">
                 <div class="col-md-4">
                     <div class="card h-100 p-4 text-center">
-                        <!-- Icono anatómico de prótesis y articulación de cadera y rodilla -->
-                        <div class="mb-2">
-                            <svg class="feature-icon" width="56" height="56" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <!-- Pelvis / Head articulation -->
-                                <circle cx="32" cy="12" r="7" fill="#004a99" opacity="0.2" stroke="#004a99" stroke-width="2.5"/>
-                                <path d="M22 10C22 6 42 6 42 10" stroke="#004a99" stroke-width="3" stroke-linecap="round"/>
-                                <!-- Femoral head & neck -->
-                                <path d="M32 19V32" stroke="#004a99" stroke-width="4" stroke-linecap="round"/>
-                                <!-- Knee joint structure -->
-                                <rect x="22" y="32" width="20" height="7" rx="3.5" fill="#004a99"/>
-                                <rect x="24" y="41" width="16" height="5" rx="2.5" fill="#004a99" opacity="0.4"/>
-                                <!-- Lower leg bone (Tibia/Fibula) -->
-                                <path d="M28 46V58" stroke="#004a99" stroke-width="3.5" stroke-linecap="round"/>
-                                <path d="M36 46V58" stroke="#004a99" stroke-width="3.5" stroke-linecap="round"/>
-                            </svg>
-                        </div>
+                        <i class="fa-solid fa-joint feature-icon"></i>
                         <h3>Reemplazo de Cadera y Rodilla</h3>
                         <p>Cirugía protésica avanzada para pacientes con osteoartritis severa o desgaste articular.</p>
                     </div>
@@ -170,6 +262,62 @@
         </div>
     </section>
 
+    <!-- Preguntas Frecuentes -->
+    <section id="faq" class="section-padding">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="h1">Preguntas Frecuentes</h2>
+                <p class="text-muted">Resolvemos las dudas más comunes de nuestros pacientes.</p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-9">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h3 class="accordion-header" id="faqHeading1">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse1" aria-expanded="true" aria-controls="faqCollapse1">
+                                    ¿Qué debo llevar a mi primera consulta?
+                                </button>
+                            </h3>
+                            <div id="faqCollapse1" class="accordion-collapse collapse show" aria-labelledby="faqHeading1" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">Estudios de imagen previos (radiografías, resonancias), resultados de laboratorio recientes y tu identificación oficial. Si cuentas con seguro médico, trae tu póliza o carta de autorización.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h3 class="accordion-header" id="faqHeading2">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2">
+                                    ¿Cuánto tiempo toma la recuperación de una cirugía de rodilla?
+                                </button>
+                            </h3>
+                            <div id="faqCollapse2" class="accordion-collapse collapse" aria-labelledby="faqHeading2" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">Depende del procedimiento específico. En cirugías de mínima invasión, muchos pacientes retoman actividades básicas en pocas semanas, mientras que la recuperación completa puede tomar varios meses. En consulta se define un plan personalizado.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h3 class="accordion-header" id="faqHeading3">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse3" aria-expanded="false" aria-controls="faqCollapse3">
+                                    ¿Atienden urgencias fuera de horario?
+                                </button>
+                            </h3>
+                            <div id="faqCollapse3" class="accordion-collapse collapse" aria-labelledby="faqHeading3" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">Sí, para urgencias traumatológicas fuera del horario de consulta puedes comunicarte a la línea de urgencias del hospital que aparece en la sección de contacto.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h3 class="accordion-header" id="faqHeading4">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse4" aria-expanded="false" aria-controls="faqCollapse4">
+                                    ¿Trabajan con mi aseguradora?
+                                </button>
+                            </h3>
+                            <div id="faqCollapse4" class="accordion-collapse collapse" aria-labelledby="faqHeading4" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">Contamos con convenios vigentes con las principales aseguradoras del país, incluyendo GNP, AXA, MetLife, Bupa y Seguros Monterrey. Consulta tu cobertura específica al agendar tu cita.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Contacto y Mapa -->
     <section id="contacto" class="section-padding">
         <div class="container">
@@ -186,7 +334,7 @@
                             <p class="mb-1"><strong>Teléfono:</strong> <a href="tel:+528992210025" class="text-decoration-none text-dark">+52 (899) 221.00.25</a></p>
                             <p class="mb-1 text-danger"><strong>Urgencias:</strong> <a href="tel:+528999362666" class="text-decoration-none text-danger">+52 (899) 936.26.66</a></p>
                             <p class="mb-3"><strong>Email:</strong> <a href="mailto:enrisal1410@hotmail.com" class="text-decoration-none text-dark">enrisal1410@hotmail.com</a></p>
-
+                            
                             <h6 class="fw-bold mt-3 mb-2"><i class="fa-regular fa-clock me-2"></i>Horarios:</h6>
                             <p class="small text-muted mb-1"><strong>Lunes a Viernes:</strong> 10:00 - 13:00 hrs y 16:00 - 18:30 hrs.</p>
                             <p class="small text-muted"><strong>Sábado:</strong> 10:00 - 13:00 hrs. (Previa Cita)</p>
@@ -207,12 +355,12 @@
                 <div class="col-md-7">
                     <div class="map-container h-100 min-vh-50">
                         <!-- Mapa centrado en las coordenadas 26.110780, -98.330348 -->
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3582.503460773634!2d-98.3325366!3d26.110780!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x866509653065e839%3A0xc6e4b4499d306f1e!2sChristus%20Muguerza%20Hospital%20Reynosa!5e0!3m2!1ses-419!2smx!4v1711200000000!5m2!1ses-419!2smx"
-                            width="100%"
-                            height="100%"
-                            style="border:0; min-height: 450px;"
-                            allowfullscreen=""
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3582.503460773634!2d-98.3325366!3d26.110780!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x866509653065e839%3A0xc6e4b4499d306f1e!2sChristus%20Muguerza%20Hospital%20Reynosa!5e0!3m2!1ses-419!2smx!4v1711200000000!5m2!1ses-419!2smx" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0; min-height: 450px;" 
+                            allowfullscreen="" 
                             loading="lazy">
                         </iframe>
                     </div>
@@ -227,9 +375,10 @@
             <h4 class="mb-4">DR. ENRIQUE SALDAÑA LÓPEZ</h4>
             <p class="mb-3">Especialista en Traumatología y Ortopedia | Reynosa, Tamps.</p>
             <div class="mb-4">
-                <a href="#" class="text-white mx-3 fs-4"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#" class="text-white mx-3 fs-4"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#" class="text-white mx-3 fs-4"><i class="fa-brands fa-linkedin-in"></i></a>
+                <!-- TODO: replace # with your real social profile URLs -->
+                <a href="#" class="text-white mx-3 fs-4" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" class="text-white mx-3 fs-4" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="text-white mx-3 fs-4" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
             </div>
             <div class="border-top border-secondary pt-4">
                 <p class="mb-1 cedula-text">Cédula Prof: 89012345 | Especialidad: 54321098</p>
@@ -238,7 +387,51 @@
         </div>
     </footer>
 
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/528992210025?text=Hola%2C%20quisiera%20agendar%20una%20cita" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Agendar cita por WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Botón volver arriba -->
+    <button id="backToTop" class="back-to-top" aria-label="Volver arriba">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Close mobile menu after clicking a nav link
+        document.querySelectorAll('#navLinks .nav-link').forEach(function (link) {
+            link.addEventListener('click', function () {
+                var navbarCollapse = document.getElementById('navbarNav');
+                if (navbarCollapse.classList.contains('show')) {
+                    bootstrap.Collapse.getOrCreateInstance(navbarCollapse).hide();
+                }
+            });
+        });
+
+        // Highlight the nav link for the section currently in view
+        var sections = document.querySelectorAll('section[id]');
+        var navLinks = document.querySelectorAll('#navLinks .nav-link');
+        var spy = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    navLinks.forEach(function (link) {
+                        link.classList.toggle('active', link.getAttribute('href') === '#' + entry.target.id);
+                    });
+                }
+            });
+        }, { rootMargin: '-40% 0px -55% 0px' });
+        sections.forEach(function (section) { spy.observe(section); });
+
+        // Show/hide back-to-top button
+        var backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', function () {
+            backToTop.classList.toggle('show', window.scrollY > 500);
+        });
+        backToTop.addEventListener('click', function () {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
 </body>
 </html>
